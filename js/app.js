@@ -25,6 +25,7 @@ $(function makeGrid(){
       }
     }
 
+    //with this selector and this function, we are able to change the individual cd to any color that the user wants.
     $('table').on('click', 'td', function(e){
       e.preventDefault();
 
@@ -35,14 +36,3 @@ $(function makeGrid(){
     });
   })
 });
-
-// $(function changeColor(){
-//   $('td').on('click', function(e){
-//     e.preventDefault();
-//
-//     const cellCollor = $('#colorTD').val();
-//
-//     $(e.target).css('background-color',cellCollor);
-//
-//   })
-// });
