@@ -11,7 +11,6 @@ $(function makeGrid(){
     //selects the number of rows and columns by input
     const rows = $('#input_height').val();
     const columns = $('#input_width').val();
-    console.log(rows,columns);
 
     //the first loop serves for creating the rows of the grid
     for (let x = 1; x<=rows; ++x){
@@ -25,9 +24,25 @@ $(function makeGrid(){
         $('td').css('border-color',colorBorder);
       }
     }
+
+    $('table').on('click', 'td', function(e){
+      e.preventDefault();
+
+      const cellCollor = $('#colorTD').val();
+
+      $(e.target).css('background-color',cellCollor);
+
+    });
   })
 });
 
-$(function changeColor(){
-  $('td').on('click',)
-});
+// $(function changeColor(){
+//   $('td').on('click', function(e){
+//     e.preventDefault();
+//
+//     const cellCollor = $('#colorTD').val();
+//
+//     $(e.target).css('background-color',cellCollor);
+//
+//   })
+// });
