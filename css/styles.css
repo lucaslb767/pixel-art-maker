@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    max-width: 1280px;
 }
 
 h1 {
@@ -37,4 +38,10 @@ td {
 
 input[type=number] {
     width: 6em;
+}
+
+.colorWrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
 }
