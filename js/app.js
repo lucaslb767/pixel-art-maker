@@ -5,7 +5,9 @@ $(function makeGrid(){
   $('.inputBtn').on('click', function(e){
     e.preventDefault();
 
+    //selects the color according to the input
     const color = $('#colorPicker').val()
+    const colorBorder = $('#colorBorder').val()
     //selects the number of rows and columns by input
     const rows = $('#input_height').val();
     const columns = $('#input_width').val();
@@ -20,7 +22,12 @@ $(function makeGrid(){
       for (let y = 1; y<=columns; ++y){
         $('.rowStructure:last-of-type').append('<td></td>');
         $('td').css('background-color',color);
+        $('td').css('border-color',colorBorder);
       }
     }
   })
+});
+
+$(function changeColor(){
+  $('td').on('click',)
 });
